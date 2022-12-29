@@ -37,6 +37,12 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
+## Lessons Learned
+
+1. Define components in `src/lib/components` folder, that's the preferred comunity project folder layout.
+2. Export folder files in barrel files, so accessing them is easier (note: this doesn't affect performance, remember Svelte cuts everything that is not needed when bundling the app).
+3. Define alias for main folders in `svelte.config.js` and then access them via **@** annotation (e.g., '@components': path.resolve('./src/lib/components/index.ts'))
+
 ## Tooling
 
 Requires following tools:
